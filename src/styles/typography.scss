@@ -1,0 +1,23 @@
+.title {
+    font-weight:  bold;
+    color: $gray-600;
+    line-height: 1.8;
+    font-size: 1.125rem;
+}
+.title.white{
+    color: $white;
+
+}
+
+p,span {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: $gray-300;
+}
+
+
+.highlight {
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: $color-primary;
+}

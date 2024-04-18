@@ -1,0 +1,26 @@
+@use '../../styles/global.scss';
+
+.header {
+    background-color: global.$gray-0;
+    div {
+        display: flex;
+        justify-content: space-between;
+        button {
+            background-color: global.$gray-0;
+            border: none;
+            display: flex;
+            color: global.$gray-100;
+            font-weight: bold;
+
+            span {
+                margin: -0.3125rem 0 0 -0.625rem;
+                background-color: global.$color-primary;
+                align-self: self-start;
+                color: global.$white;
+                padding: 1px 3px;
+                border-radius: 5px;
+                font-size: 10px;
+            }
+        }
+    }
+}
