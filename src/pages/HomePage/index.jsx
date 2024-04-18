@@ -11,27 +11,28 @@ export const HomePage = () => {
 
    useEffect(() => {
       const getList = async () => {
-         const { data } = await api.get("products");
-         setProductList(data);
-      };
-      getList();
-      loadCartFromLocalStorage(); 
-   }, []);
+         const { data } = await api.get("products")
+         setProductList(data)
+      }
+      getList()
+      loadCartFromLocalStorage() 
+   }, [])
 
    useEffect(() => {
-      saveLocalStorage(cartList);
-   }, [cartList]);
+      saveLocalStorage(cartList)
+   }, [cartList])
 
    const loadCartFromLocalStorage = () => {
-      const cartItems = localStorage.getItem("cartList");
+      const cartItems = localStorage.getItem("cartList")
       if (cartItems) {
-         setCartList(prevCartList => [...prevCartList, ...JSON.parse(cartItems)]);
+         setCartList(prevCartList => [...prevCartList, ...JSON.parse(cartItems)])
       }
-   };
+   }
    
    const saveLocalStorage = (cartItems) => {
-      localStorage.setItem("cartList", JSON.stringify(cartItems));
-   };
+      localStorage.setItem("cartList", JSON.stringify(cartItems))
+   }
+   
    const toggleCart = () => {
       setIsCartOpen(!isCartOpen)
    }
@@ -60,7 +61,7 @@ export const HomePage = () => {
 
    const handleRemoveQuantity = (product) => {
       if (product.quantity === 1) {
-         return removeFromCart(product.id);
+         return removeFromCart(product.id)
       }
       const updatedProduct = cartList.map(item => {
          if (item.id === product.id) {
