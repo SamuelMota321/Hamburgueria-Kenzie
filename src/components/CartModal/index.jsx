@@ -3,7 +3,7 @@ import { CartItemCard } from "./CartItemCard"
 import styles from './styles.module.scss'
 import { useEffect, useRef } from "react"
 
-export const CartModal = ({ cartList, removeFromCart, clearCart, toggleCart, handleAddQuantity, handleRemoveQuantity, }) => {
+export const CartModal = ({ cartList, removeFromCart, clearCart, toggleCart, handleAddQuantity, handleRemoveQuantity }) => {
    const total = cartList.reduce((prevValue, product) => {
       return prevValue + (product.price * product.quantity)
    }, 0)
